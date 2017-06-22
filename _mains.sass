@@ -1,0 +1,52 @@
+
+@mixin clearfix()
+	&:before,
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+
+=border-radius($radius)
+	-webkit-border-radius: $radius 
+	-moz-border-radius: $radius 
+	-ms-border-radius: $radius 
+	border-radius: $radius
+
+@mixin icon-style($font-size, $line-height, $height, $width, $color, $background-color, $radius)
+	display: inline-block
+	font-size: $font-size
+	line-height: $line-height
+	height: $height
+	width: $width
+	color: $color
+	background-color: $background-color
+	+border-radius($radius)
+
+=filter($grayscale, $contrast)
+	filter: grayscale($grayscale) contrast($contrast)
+	-webkit-filter: grayscale($grayscale) contrast($contrast) /* Safari 6.0 - 9.0 */
+
+*
+	box-sizing: border-box
+
+body
+	margin: 0
+	font: 16px $fonts
+
+.container 
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+	padding-left: 20px
+	padding-right: 20px
+
+
+h1, h2, h3, h4
+	text-transform: uppercase
+	margin: 0
+
+.row
+	@include clearfix
+
+

@@ -1,0 +1,39 @@
+/*====STYLE SEKCJI ADVANTAGES======*/
+.advantages
+	background-color: $color-1
+	min-height: 300px
+	padding: 40px 0
+	text-align: center
+
+	.container
+		margin: 0 auto
+
+		.row
+			margin: 0 -20px
+
+	.col-4
+		padding: 0 20px
+
+	i
+		@include icon-style(50px, 85px, 85px, 85px, $color-1, $color-2, 15px)
+
+	a
+		text-decoration: none
+		text-transform: uppercase
+		color: $color-2
+
+		&:hover
+			color: $color-3
+
+			i
+				background-color: $color-3
+
+		div
+			padding: 10px
+
+	h4
+		margin: 10px 0 0 0
+
+	p
+		margin: 0
+		color: $color-6
